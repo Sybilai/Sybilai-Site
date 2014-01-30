@@ -1,0 +1,8 @@
+%table.table.table-stripped
+	%thead
+		%th User
+		%th Fasole
+	- @scorings.each do |scoring|
+		%tr
+			%td= scoring.name
+			%td= scoring.scoring
