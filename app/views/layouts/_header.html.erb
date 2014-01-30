@@ -1,21 +1,14 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
+<div class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-      <%= link_to "Sybil AI", '#', id: "logo" %>
+      <%= link_to "Sybil AI", '/', id: "logo" %>
       <nav>
-        <ul class="nav pull-right">
-	  <!--
-          <li><%= link_to "Home",    '/' %></li>
+        <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Global Ranking",    '/global_ranking' %></li>
-	  <li><%= link_to "Local Ranking", '/local_ranking' %></li>
-          <li><%= link_to "Pong", '/pong' %></li>
-	  <li><%= link_to "Documentation", '/documentation' %></li>
-          --!>
-	  <% @pages.each do |page| %>
+          <li><%= link_to "Pong", '/vis/pong' %></li>
+	  <% Page.all.each do |page| %>
 		<li> <%= link_to page.name, page %></li>
 	  <% end %>
 	</ul>
       </nav>
     </div>
-  </div>
-</header>
+</div>

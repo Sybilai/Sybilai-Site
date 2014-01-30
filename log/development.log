@@ -16837,3 +16837,340 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
   Rendered /home/x/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /home/x/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
   Rendered /home/x/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for 95.77.122.69 at 2014-01-30 08:06:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#Home as HTML
+  Rendered static_pages/Home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 500 Internal Server Error in 122ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:           <li><%= link_to "Pong", '/pong' %></li>
+    12: 	  <li><%= link_to "Documentation", '/documentation' %></li>
+    13:           --!>
+    14: 	  <% @pages.each do |page| %>
+    15: 		<li> <%= link_to page.name, page %></li>
+    16: 	  <% end %>
+    17: 	</ul>
+  app/views/layouts/_header.html.erb:14:in `_app_views_layouts__header_html_erb___3822305687404720726_33284320'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__743426669163881798_32225740'
+
+
+  Rendered /home/andrici/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/andrici/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/andrici/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.6ms)
+
+
+Started GET "/" for 95.77.122.69 at 2014-01-30 08:07:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#Home as HTML
+  Rendered static_pages/Home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered layouts/_header.html.erb (10.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 120.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/api.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/style.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:15 -0500
+
+
+Started GET "/assets/api.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:16 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:16 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:16 -0500
+
+
+Started GET "/pages/5" for 95.77.122.69 at 2014-01-30 08:07:19 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered pages/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/5" for 95.77.122.69 at 2014-01-30 08:07:19 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered pages/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/style.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/api.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/api.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:20 -0500
+
+
+Started GET "/pages" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered pages/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/api.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/style.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/api.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:28 -0500
+
+
+Started GET "/pages/new" for 95.77.122.69 at 2014-01-30 08:07:30 -0500
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (129.4ms)
+  Rendered pages/new.html.erb within layouts/application (131.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 148ms (Views: 146.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/new" for 95.77.122.69 at 2014-01-30 08:07:30 -0500
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (4.6ms)
+  Rendered pages/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages"
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/api.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/style.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/api.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:31 -0500
+
+
+Started POST "/pages" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yJSQYrjb17NdteF4f41AtHx0tT/fuMXUSR5DyyDvWGI=", "page"=>{"name"=>"Documentation", "permalink"=>"documentation", "content"=>"### Port\r\n```\r\nhttp://95.85.45.192:8124\r\n```\r\n\r\n\r\n### Concept\r\nWe have the **environment**, the **visualizer** and your program (lets call it **AI** because this is what is it).\r\n\r\n**Environment** is our server. It is our \"referee\".\r\n\r\n**Visualizer** is the visual representation of the game. [Check it out](http://) to see how it looks like.\r\n\r\nYou need to make an **AI** which would play versus other's **AIs**. How? Very easy, your code just need to connect to **environment** through a `TCP/IP` connection and it's ready to play. You can programming in what ever you want, because it will run on your machine and it will need just to connect to our server. That's it.\r\n\r\nEvery message sent from **environment** to **AI** and vice-versa is formed from one, or more, stringified JSON object with `\\n` at end. \r\n\r\n### Pong\r\n\r\nOur first game is Pong, the classic game, with one improvement, supports more players at once. Engine physics from behind is [box2dweb](https://code.google.com/p/box2dweb/).\r\n\r\nYou will need to know some geometry, but not to much. [Check this article](http://en.wikipedia.org/wiki/Regular_polygon)  about regular polygons from Wikipedia.  \r\n\r\nFor calculating the polygon (which is regular) we will need circumradius, apothem (the distance from the center to any side) and exterior angle.\r\nLets note with `s` the edge's length, with `a` the apothem and with `n` the number of edges.\r\n\r\nFor circumradius and apothem use this formula:\r\n{<1>}![Circumradius formula from Wikipedia](http://upload.wikimedia.org/math/a/f/d/afd0d8a51e81269521633ef79a3c22bc.png)\r\n\r\nThe exterior angle is equal with:\r\n{<2>}![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B2%5Cpi%7D%7Bn%7D)\r\n \r\nNow, first edge has this coordinates `[(-s/2, -a), (s/2, -a)]`.\r\nSecond edge is the first edge, rotated with the **exterior angle** in counter trigonometric direction. And so on.\r\n\r\nEvery player has his own edge and paddle. Paddle's position is a value between `[0, (edge's length - paddle's length)]` which represents where is the left point of the paddle. Paddle has width, height, speed, distance between paddle and edge, and position on edge, so keep an eye on all of them.\r\n\r\nBalls are different. For each one you get the position and the linearVelocity.\r\n\r\nThe constant datas are in Game Rules which is first thing you will get. For number of edges, position of paddles, balls, etc, you will need to check the Game State.\r\n\r\n### Messages\r\n\r\n> It's necessary to put `\\n` at the end of every stringified JSON object.\r\n\r\nAfter you get connected, first message you need to send is `event: connect`.\r\n\r\n#### Messages (AI -> Environment)\r\n\r\n##### Event: connect\r\n```JavaScript\r\n{ event:\"connect\", \r\n  name:\"<<your AI's name>>\"\r\n}\r\n```\r\n\r\n##### Event: game_state\r\nIf you want one more time the game state, you can ask for it.\r\n```JavaScript\r\n{ event: \"game_state\" }\r\n```\r\n\r\n##### Event: move\r\nIf you want to move, you need to send a event `move` with location where you want to get.\r\n```JavaScript\r\n{ event: \"move\",\r\n  x: integer\r\n}\r\n```\r\n\r\n#### Messages (Environment -> AI)\r\n##### Event: game_rules\r\nGameRules is first message you will get if you connected succesfully.\r\n```JavaScript\r\n{ event: \"game_rules\",\r\n  yourID: integer,\r\n  gameRules: {\r\n  \tbaseBallRadius: double,\r\n  \tbaseEdgeWidth: integer,\r\n  \tbasePaddleWidth: double,\r\n  \tbasePaddleHeight: double,\r\n  \tbasePaddleToEdgeDistance: double,\r\n  \tbasePaddleSpeed: double,\r\n  \tframesPerSecond: integer,\r\n  \tcurrentTimestamp: integer // number of frames past from the start\r\n  }\r\n}\r\n```\r\n##### Event: game_state\r\n```JavaScript\r\n{ event: \"game_state\",\r\n  balls: [Ball, Ball, ... Ball],\r\n  field: [Edge, Edge, ... Edge],\r\n  timestamp: integer\r\n```\r\n##### Event: collision\r\nWhen a ball is changing direction.\r\n```JavaScript\r\n{ event: \"collision\",\r\n  ball: Ball,\r\n  timestamp: integer\r\n}\r\n```\r\n##### Event: move\r\nWhen a player wants to change his position, you will get an event `move` with his current position and his direction. When he stops from moving, you will get a event move with direction `none`.\r\nYou will get the direction (if is left or right) of a player once a second.\r\n```JavaScript\r\n{ event: \"move\",\r\n  player_id: integer,\r\n  x: integer,\r\n  direction: \"left\"/\"none\"/\"right\",\r\n  timestamp: integer\r\n```\r\n##### Event: game_over\r\nIf you lose, you will get this event.\r\n```JavaScript\r\n{ event: \"game_over\" }\r\n```\r\n#### Classes\r\n##### Ball\r\n```JavaScript\r\n{ id: integer,\r\n  position: {\r\n  \tx: double,\r\n    y: double\r\n  },\r\n  linearVelocity: {\r\n  \tx: double,\r\n    y: double\r\n  }\r\n```\r\n##### Edge\r\nIf vacant is true, there's no player on the edge and `player` is undefined.\r\n```JavaScript\r\n{ vacant: boolean,\r\n  player: Player\r\n```\r\n##### Player\r\n```JavaScript\r\n{ id: integer,\r\n  name: string,\r\n  paddle: {\r\n  \tx: integer\r\n  },\r\n  action: {\r\n  \tdirection: left/right/none\r\n  }\r\n```"}, "commit"=>"Create Page"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "pages" ("content", "created_at", "name", "permalink", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "### Port\r\n```\r\nhttp://95.85.45.192:8124\r\n```\r\n\r\n\r\n### Concept\r\nWe have the **environment**, the **visualizer** and your program (lets call it **AI** because this is what is it).\r\n\r\n**Environment** is our server. It is our \"referee\".\r\n\r\n**Visualizer** is the visual representation of the game. [Check it out](http://) to see how it looks like.\r\n\r\nYou need to make an **AI** which would play versus other's **AIs**. How? Very easy, your code just need to connect to **environment** through a `TCP/IP` connection and it's ready to play. You can programming in what ever you want, because it will run on your machine and it will need just to connect to our server. That's it.\r\n\r\nEvery message sent from **environment** to **AI** and vice-versa is formed from one, or more, stringified JSON object with `\\n` at end. \r\n\r\n### Pong\r\n\r\nOur first game is Pong, the classic game, with one improvement, supports more players at once. Engine physics from behind is [box2dweb](https://code.google.com/p/box2dweb/).\r\n\r\nYou will need to know some geometry, but not to much. [Check this article](http://en.wikipedia.org/wiki/Regular_polygon)  about regular polygons from Wikipedia.  \r\n\r\nFor calculating the polygon (which is regular) we will need circumradius, apothem (the distance from the center to any side) and exterior angle.\r\nLets note with `s` the edge's length, with `a` the apothem and with `n` the number of edges.\r\n\r\nFor circumradius and apothem use this formula:\r\n{<1>}![Circumradius formula from Wikipedia](http://upload.wikimedia.org/math/a/f/d/afd0d8a51e81269521633ef79a3c22bc.png)\r\n\r\nThe exterior angle is equal with:\r\n{<2>}![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B2%5Cpi%7D%7Bn%7D)\r\n \r\nNow, first edge has this coordinates `[(-s/2, -a), (s/2, -a)]`.\r\nSecond edge is the first edge, rotated with the **exterior angle** in counter trigonometric direction. And so on.\r\n\r\nEvery player has his own edge and paddle. Paddle's position is a value between `[0, (edge's length - paddle's length)]` which represents where is the left point of the paddle. Paddle has width, height, speed, distance between paddle and edge, and position on edge, so keep an eye on all of them.\r\n\r\nBalls are different. For each one you get the position and the linearVelocity.\r\n\r\nThe constant datas are in Game Rules which is first thing you will get. For number of edges, position of paddles, balls, etc, you will need to check the Game State.\r\n\r\n### Messages\r\n\r\n> It's necessary to put `\\n` at the end of every stringified JSON object.\r\n\r\nAfter you get connected, first message you need to send is `event: connect`.\r\n\r\n#### Messages (AI -> Environment)\r\n\r\n##### Event: connect\r\n```JavaScript\r\n{ event:\"connect\", \r\n  name:\"<<your AI's name>>\"\r\n}\r\n```\r\n\r\n##### Event: game_state\r\nIf you want one more time the game state, you can ask for it.\r\n```JavaScript\r\n{ event: \"game_state\" }\r\n```\r\n\r\n##### Event: move\r\nIf you want to move, you need to send a event `move` with location where you want to get.\r\n```JavaScript\r\n{ event: \"move\",\r\n  x: integer\r\n}\r\n```\r\n\r\n#### Messages (Environment -> AI)\r\n##### Event: game_rules\r\nGameRules is first message you will get if you connected succesfully.\r\n```JavaScript\r\n{ event: \"game_rules\",\r\n  yourID: integer,\r\n  gameRules: {\r\n  \tbaseBallRadius: double,\r\n  \tbaseEdgeWidth: integer,\r\n  \tbasePaddleWidth: double,\r\n  \tbasePaddleHeight: double,\r\n  \tbasePaddleToEdgeDistance: double,\r\n  \tbasePaddleSpeed: double,\r\n  \tframesPerSecond: integer,\r\n  \tcurrentTimestamp: integer // number of frames past from the start\r\n  }\r\n}\r\n```\r\n##### Event: game_state\r\n```JavaScript\r\n{ event: \"game_state\",\r\n  balls: [Ball, Ball, ... Ball],\r\n  field: [Edge, Edge, ... Edge],\r\n  timestamp: integer\r\n```\r\n##### Event: collision\r\nWhen a ball is changing direction.\r\n```JavaScript\r\n{ event: \"collision\",\r\n  ball: Ball,\r\n  timestamp: integer\r\n}\r\n```\r\n##### Event: move\r\nWhen a player wants to change his position, you will get an event `move` with his current position and his direction. When he stops from moving, you will get a event move with direction `none`.\r\nYou will get the direction (if is left or right) of a player once a second.\r\n```JavaScript\r\n{ event: \"move\",\r\n  player_id: integer,\r\n  x: integer,\r\n  direction: \"left\"/\"none\"/\"right\",\r\n  timestamp: integer\r\n```\r\n##### Event: game_over\r\nIf you lose, you will get this event.\r\n```JavaScript\r\n{ event: \"game_over\" }\r\n```\r\n#### Classes\r\n##### Ball\r\n```JavaScript\r\n{ id: integer,\r\n  position: {\r\n  \tx: double,\r\n    y: double\r\n  },\r\n  linearVelocity: {\r\n  \tx: double,\r\n    y: double\r\n  }\r\n```\r\n##### Edge\r\nIf vacant is true, there's no player on the edge and `player` is undefined.\r\n```JavaScript\r\n{ vacant: boolean,\r\n  player: Player\r\n```\r\n##### Player\r\n```JavaScript\r\n{ id: integer,\r\n  name: string,\r\n  paddle: {\r\n  \tx: integer\r\n  },\r\n  action: {\r\n  \tdirection: left/right/none\r\n  }\r\n```"], ["created_at", Thu, 30 Jan 2014 13:07:56 UTC +00:00], ["name", "Documentation"], ["permalink", "documentation"], ["updated_at", Thu, 30 Jan 2014 13:07:56 UTC +00:00]]
+  [1m[36m (16.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://95.85.45.192:9292/pages/6
+Completed 302 Found in 28ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/pages/6" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPage Load (11.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 12.8ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/api.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/api.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/style.css?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 95.77.122.69 at 2014-01-30 08:07:56 -0500
+
+
+Started GET "/pages/6" for 69.171.234.113 at 2014-01-30 08:08:05 -0500
+Processing by PagesController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered pages/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/6" for 79.112.93.138 at 2014-01-30 08:08:11 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered pages/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages"[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 79.112.93.138 at 2014-01-30 08:08:11 -0500
+
+
+Started GET "/assets/api.css?body=1" for 79.112.93.138 at 2014-01-30 08:08:11 -0500
+
+
+Started GET "/assets/static_pages.css?body=1" for 79.112.93.138 at 2014-01-30 08:08:11 -0500
+
+
+Started GET "/assets/style.css?body=1" for 79.112.93.138 at 2014-01-30 08:08:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/api.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/pages.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/static_pages.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 79.112.93.138 at 2014-01-30 08:08:12 -0500
