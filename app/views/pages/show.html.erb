@@ -4,4 +4,4 @@
   <%= @page.name %>
 </h1>
 
-<%= markdown(@page.content) %>
+<%= @page.compiled_content.html_safe %>

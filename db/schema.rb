@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301174419) do
+ActiveRecord::Schema.define(version: 20140310094333) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140301174419) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "compiled_content"
   end
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink"
