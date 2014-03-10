@@ -2,15 +2,12 @@ Wagahahahgagahah::Application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :pages
-
   get "api/NewScoring"
   match '/', to: 'static_pages#Home', via: 'get'
   match '/global_ranking', to: 'static_pages#GlobalRanking', via: 'get'
-  match '/local_ranking', to: 'static_pages#LocalRanking' , via: 'get'
   match '/pong', to: 'static_pages#Pong', via: 'get'
-  match '/documentation', to: 'static_pages#Documentation', via: 'get'
   match '/api/new_scoring', to: 'api#NewScoring', via: 'get'
+  get ':permalink', to: 'pages#show', as: :page
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
