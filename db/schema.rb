@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310094333) do
+ActiveRecord::Schema.define(version: 20140531162612) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 20140310094333) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "games", force: true do |t|
+    t.string "name"
+    t.string "slug"
+  end
+
   create_table "pages", force: true do |t|
     t.string   "name"
     t.string   "permalink"
@@ -56,6 +61,13 @@ ActiveRecord::Schema.define(version: 20140310094333) do
   end
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink"
+
+  create_table "score_tables", force: true do |t|
+    t.string "user_id"
+    t.string "ai_name"
+    t.string "game_id"
+    t.string "score"
+  end
 
   create_table "scores", force: true do |t|
     t.string   "name"
