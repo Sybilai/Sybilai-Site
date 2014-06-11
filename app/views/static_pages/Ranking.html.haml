@@ -10,7 +10,7 @@
   - @rankings.each do |ranking|
     %tr
       %td= ranking.user.email.split('@').first
-      %td= ranking.games_played
-      %td= ranking.kills
-      %td= ranking.bombs
+      %td= ranking.games_played.to_i
+      %td= ranking.kills.to_i
+      %td= ranking.bombs.to_i
       %td= ranking.ratio
