@@ -1,0 +1,10 @@
+%h1 Ranking
+
+%table.table.table-stripped
+	%thead
+		%th User
+		%th Fasole
+	- @rankings.each do |ranking|
+		%tr
+			%td= ranking.name
+			%td= ranking.scoring

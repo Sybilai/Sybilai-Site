@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   	   
   end
   
-  def Documentation
+  def Ranking
+  	@rankings = Ranking.all
   end
 end

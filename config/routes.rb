@@ -8,6 +8,7 @@ Wagahahahgagahah::Application.routes.draw do
   match '/global_ranking', to: 'static_pages#GlobalRanking', via: 'get'
   match '/pong', to: 'static_pages#Pong', via: 'get'
   match '/api/new_scoring', to: 'api#NewScoring', via: 'get'
+  match '/ranking', to: 'static_pages#Ranking', via: 'get'
   get ':permalink', to: 'pages#show', as: :page
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
