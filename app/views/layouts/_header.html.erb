@@ -3,22 +3,24 @@
     <div class="container">
       
       <nav>
-        <%= image_tag "sybilai-logo-width.png"  %>
-        <ul class="nav navbar-nav navbar-right">
+        <%= image_tag "sybilai-logo-width.png", class: "navbar-brand header_logo"  %>
+        <ul class="nav navbar-nav meniu">
       	  <% Page.all.each do |page| %>
       		  <li> <%= link_to page.name, page %></li>
       	  <% end %>
       	</ul>
+        <ul class="nav navbar-nav navbar-right header_navbar">
          <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <button type="button" class="btn btn-default button_header"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button>
+            <li><button type="button" class="btn btn-default button_outside_header"><%= link_to 'Edit profile', edit_user_registration_path %></button></li> |
+            <li><button type="button" class="btn btn-default button_header"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button></li>
           <% else %>
             
-            <button type="button" class="btn btn-default button_outside_header"><%= link_to "sign in", new_user_session_path %> </button>
-            <button type="button" class="btn btn-default button_header"><%= link_to "register", new_user_registration_path %></button>
+            <li><button type="button" class="btn btn-default button_outside_header"><%= link_to "sign in", new_user_session_path %> </button></li>
+            <li><button type="button" class="btn btn-default button_header"><%= link_to "register", new_user_registration_path %></button></li>
 
           <% end %>
+        </ul>
       </nav>
     </div>
 </div>

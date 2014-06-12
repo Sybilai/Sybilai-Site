@@ -110,6 +110,11 @@
 
 }
 
+.row{
+  /* It's bigger than full width otherwise due to bootstrap*/
+  margin: 0px;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -180,8 +185,6 @@ footer a {
   margin:0px 8px;
 }
 
-  
-
 footer small {
   margin-left:50px;
   float: left;
@@ -205,10 +208,18 @@ footer ul li {
 
 /* header */
 
+.header_logo{
+  margin-right: 40px;
+}
+
+.meniu li a{
+  line-height:2;
+}
+
 .global_header{
   background-color: #fff;
-  margin-top:10px;
   border: 0px;
+  margin-bottom:0px;
 }
 
 .global_header a{
@@ -219,7 +230,7 @@ footer ul li {
 }
 
 .button_outside_header{
-  margin:0px;
+  border:0px;
 }
 
 .button_header{
@@ -233,35 +244,37 @@ footer ul li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c4eb9', endColorstr='#5a328d',GradientType=0 ); /* IE6-9 */
 }
 
+.header_navbar li{
+  line-height:5;
+}
+
 .button_header a{
   color:white;
 }
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 /* Home */ 
 
+.hero_rel{
+  position: relative;
+}
+
 .video{
-  height:500px;
+  width:100%;
+  height:auto;
+}
+
+.video_text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
 }
 
 #video_image{
-position:absolute;
-  width:1140px;
+  top:0;
+  left:0;
+  width:100%;
   z-index: -1;
 }
 
@@ -269,10 +282,9 @@ position:absolute;
   font-family: 'ubuntubold';
   font-size:24pt;
   color:#f0f0f0;
-  width:50%;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
-  padding-top:210px;
+  padding-bottom: 20px;
 }
 
 .try{
@@ -284,27 +296,67 @@ position:absolute;
   background: -ms-linear-gradient(top,  #fafafa 0%,#cecece 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #fafafa 0%,#cecece 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */
-  margin-top:30px;
-  width:124px;
-  height:36px;
-  margin-left: -62px;
-  position: relative;
+  margin-radius:5px;
+  font-family: 'ubunturegular';
+  font-size: 12pt;
+}
+
+.try_div{
+  width: 290px;
+  position: absolute;
+  top:50%;
   left:50%;
+  margin-left: -145px;
+  margin-top: -50px;
+  text-align: center;
 }
 
 #arrow{
-  height:60px;
-  width:26px;
-  margin:16px 0px 10px 0px;
-  margin-left: -13px;
-  position:relative;
+  position:absolute;
   left:50%;
+  top:60%;
 }
 
 #bomberman{
-  height:66px;
-  width:38px;
-  margin-left:-19px;
-  position:relative;
-  left:50%;
+  position:absolute;
+  left:48%;
+  top:77%;
+}
+
+.bomber_arrow{
+  width:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about_info{
+  margin-top:30px;
+  width:1140px;
+}
+
+.hollow_logo{
+  margin: 0 auto;
+}
+
+.description {
+  margin-bottom: 80px;
+}
+
+.description_title{
+  margin-top:20px;
+  font-family: 'ubuntubold';
+  font-size: 22pt;
+  color:#4e4e4e;
+}
+
+.description_text{
+  font-family: 'ubunturegular';
+  font-size: 16pt;
+  color:#9e9e9e;
+  width:896px;
+}
+
+.features_title{
+  margin:30px 0px 26px 0px;
 }

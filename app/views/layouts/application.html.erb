@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <title><%= (yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
@@ -12,7 +10,7 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <div class="">
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>

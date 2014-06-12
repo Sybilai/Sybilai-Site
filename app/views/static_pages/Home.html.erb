@@ -1,37 +1,59 @@
-<div class="video">
-	<%= image_tag "video_image.png", id: "video_image" %>
-	<div class="slogan">your AI vs other's AIs</div>
-	<button type="button" class="btn btn-standard try">try Sybil AI now</button>
-	<br>
-	<%= image_tag "arrow.png", id: "arrow" %>
-	<br>
-	<%= image_tag "bomberman.png", id: "bomberman" %>
+<div class="hero-unit hero_rel">
+	<div class="video row">
+		<%= image_tag "video_image.png", id: "video_image" %>
+	</div>
+	<div class="bomber_arrow row">
+		<%= image_tag "r_jpg.png", id: "video_image" %>
+	</div>
+	<div class="bomber_arrow row">
+		<%= image_tag "gif.gif", id: "video_image" %> 
+	</div>
+	<div class="bomber_arrow row">
+		<%= image_tag "r_shadow.png", id: "video_image" %>
+	</div>
+	<div class="bomber_arrow row">
+		<%= image_tag "r_color_cover.png", id: "video_image" %>
+	</div>
+	<div class="bomber_arrow row">
+		<%= image_tag "bomberman+arrow.png", id: "video_image" %>
+	</div>
+	<div class="video_text row">
+		<div class="try_div">
+			<div class="slogan">your AI vs other's AIs</div>
+			<button type="button" class="btn btn-standard try">try Sybilai now</button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
 </div>
 
 
 <!-- TO DO ALL FROM BELLOW -->
 
 <div class="about_info">
-	<div class="description">
-		<%= image_tag "hollow_logo.png" %>
-		<div class="description_title"></div>
+	<div class="description row">
+		<div class="hollow_logo "><%= image_tag "hollow_logo.png" %></div>
+		<div class="description_title">LOREM IPSUM DOLOR SIT AMET</div>
 		<br>
-		<div class="description_text"></div>
+		<div class="description_text">
+			Quisque et pharetra nisl, id commodo dui. Suspendisse accumsan a massa sed mollis. Nullam consectetur laoreet risus.
+			Aliquam pharetra sed mauris in euisod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum lacus masa 
+			risus consectetur sit amet. Nuc nec odio vitae felis iaculis aliquam velit.
+		</div>
 	</div>
 	<div class="features">
-		<div>
-			<div class="features_thumbnail"></div>
-			<div class="features_title"></div>
+		<div class="features_column">
+			<div class="features_thumbnail"><%= image_tag "programming.png" %></div>
+			<div class="features_title">Program in any language</div>
 			<div class="features_text"></div>
 		</div>
-		<div>
-			<div class="features_thumbnail"></div>
-			<div class="features_title"></div>
+		<div class="features_column">
+			<div class="features_thumbnail"><%= image_tag "real_time.png" %></div>
+			<div class="features_title">Real time programming</div>
 			<div class="features_text"></div>
 		</div>
-		<div>
-			<div class="features_thumbnail"></div>
-			<div class="features_title"></div>
+		<div class="features_column">
+			<div class="features_thumbnail"><%= image_tag "games.png" %></div>
+			<div class="features_title">Lots of games to come</div>
 			<div class="features_text"></div>
 		</div>
 	</div>
