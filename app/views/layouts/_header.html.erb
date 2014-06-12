@@ -1,20 +1,25 @@
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> |
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
+<div class="navbar navbar-fixed-top navbar-inverse global_header">
+  
     <div class="container">
       <%= link_to "Sybil AI", '/', id: "logo" %>
+      
       <nav>
+        <%= image_tag "sybilai-logo-width.png"  %>
         <ul class="nav navbar-nav navbar-right">
-	  <% Page.all.each do |page| %>
-		<li> <%= link_to page.name, page %></li>
-	  <% end %>
-	</ul>
+      	  <% Page.all.each do |page| %>
+      		  <li> <%= link_to page.name, page %></li>
+      	  <% end %>
+      	</ul>
+         <% if user_signed_in? %>
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path %> |
+            <button type="button" class="btn btn-default button_header"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button>
+          <% else %>
+            
+            <button type="button" class="btn btn-default button_outside_header"><%= link_to "sign in", new_user_session_path %> </button>
+            <button type="button" class="btn btn-default button_header"><%= link_to "register", new_user_registration_path %></button>
+
+          <% end %>
       </nav>
     </div>
 </div>
