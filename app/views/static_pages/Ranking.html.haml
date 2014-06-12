@@ -1,0 +1,16 @@
+%h1 Ranking
+
+%table.table.table-stripped
+  %thead
+    %th User
+    %th Sessions
+    %th Kills
+    %th Bombs
+    %th Avg. kills
+  - @rankings.each do |ranking|
+    %tr
+      %td= ranking.user.email.split('@').first
+      %td= ranking.games_played.to_i
+      %td= ranking.kills.to_i
+      %td= ranking.bombs.to_i
+      %td= ranking.ratio

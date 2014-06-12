@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310094333) do
+ActiveRecord::Schema.define(version: 20140611212710) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 20140310094333) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "games", force: true do |t|
+    t.string "name"
+    t.string "slug"
+  end
+
   create_table "pages", force: true do |t|
     t.string   "name"
     t.string   "permalink"
@@ -57,11 +62,47 @@ ActiveRecord::Schema.define(version: 20140310094333) do
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink"
 
+  create_table "rankings", force: true do |t|
+    t.decimal  "games_played"
+    t.decimal  "kills"
+    t.decimal  "bombs"
+    t.decimal  "ratio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "score_tables", force: true do |t|
+    t.string "user_id"
+    t.string "ai_name"
+    t.string "game_id"
+    t.string "score"
+  end
+
   create_table "scores", force: true do |t|
     t.string   "name"
     t.integer  "scoring"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "token"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  games_played: 9.99
+  kills: 9.99
+  bombs: 9.99
+  ratio: 9.99
+
+two:
+  name: MyString
+  games_played: 9.99
+  kills: 9.99
+  bombs: 9.99
+  ratio: 9.99
