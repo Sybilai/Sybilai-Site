@@ -1,9 +1,9 @@
-<div class="navbar navbar-inverse global_header">
+<div class="navbar global_header ">
   
     <div class="container">
       
       <nav>
-        <%= image_tag "sybilai-logo-width.png", class: "navbar-brand header_logo"  %>
+        <a href="/"><%= image_tag "sybilai-logo-width.png", class: "navbar-brand header_logo"  %></a>
         <ul class="nav navbar-nav meniu">
       	  <% Page.all.each do |page| %>
       		  <li> <%= link_to page.name, page %></li>
@@ -12,12 +12,10 @@
         <ul class="nav navbar-nav navbar-right header_navbar">
          <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
-            <li><button type="button" class="btn btn-default button_outside_header"><%= link_to 'Edit profile', edit_user_registration_path %></button></li> |
-            <li><button type="button" class="btn btn-default button_header"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button></li>
           <% else %>
             
-            <li><button type="button" class="btn btn-default button_outside_header"><%= link_to "sign in", new_user_session_path %> </button></li>
-            <li><button type="button" class="btn btn-default button_header"><%= link_to "register", new_user_registration_path %></button></li>
+            <li><%= link_to "sign in", new_user_session_path, :class=> "btn btn-default btn-primary" %></li>
+            <li><%= link_to "register", new_user_registration_path, :class=> "btn btn-default " %></li>
 
           <% end %>
         </ul>

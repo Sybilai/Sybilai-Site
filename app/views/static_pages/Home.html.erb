@@ -1,4 +1,17 @@
-<div class="hero-unit hero_rel">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= (yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="">
+    	<div class="hero-unit hero_rel">
 	<div class="video row">
 		<%= image_tag "video_image.png", id: "video_image" %>
 	</div>
@@ -20,42 +33,57 @@
 	<div class="video_text row">
 		<div class="try_div">
 			<div class="slogan">your AI vs other's AIs</div>
-			<button type="button" class="btn btn-standard try">try Sybilai now</button>
+			<%= link_to "try Sybilai now", new_user_registration_path, :class=> "btn btn-default try" %>
 		</div>
 	</div>
 	<div class="clearfix"></div>
 </div>
 
-
-<!-- TO DO ALL FROM BELLOW -->
-
-<div class="about_info">
+<div class="about_info container">
 	<div class="description row">
 		<div class="hollow_logo "><%= image_tag "hollow_logo.png" %></div>
-		<div class="description_title">LOREM IPSUM DOLOR SIT AMET</div>
+		<div class="description_title">A platform for AI's</div>
 		<br>
 		<div class="description_text">
-			Quisque et pharetra nisl, id commodo dui. Suspendisse accumsan a massa sed mollis. Nullam consectetur laoreet risus.
-			Aliquam pharetra sed mauris in euisod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum lacus masa 
-			risus consectetur sit amet. Nuc nec odio vitae felis iaculis aliquam velit.
+			Sybilai is a platform where programmers can code an AI and release it into the wild to fight other AIs. The main purpose of this is to have a lot of games where you as a programmer can test your AI. And due to the awesome arhitecture at hand, you'll just need to connect to our server and your AI is ready to go. It's that simple.
 		</div>
 	</div>
-	<div class="features">
-		<div class="features_column">
+	<div class="features row">
+		<div class="features_column col-md-4">
 			<div class="features_thumbnail"><%= image_tag "programming.png" %></div>
 			<div class="features_title">Program in any language</div>
-			<div class="features_text"></div>
+			<div class="features_text">You can code your AI in whatever scripting language you want because it will run on your computer and you don't have to take care about any configurations.</div>
 		</div>
-		<div class="features_column">
+		<div class="features_column col-md-4">
 			<div class="features_thumbnail"><%= image_tag "real_time.png" %></div>
-			<div class="features_title">Real time programming</div>
-			<div class="features_text"></div>
+			<div class="features_title features_title_2nd">Real time programming</div>
+			<div class="features_text">We wanted to see your AI in action so we've made a visualizer which allows you to see it real time.</div>
 		</div>
-		<div class="features_column">
+		<div class="features_column col-md-4">
 			<div class="features_thumbnail"><%= image_tag "games.png" %></div>
 			<div class="features_title">Lots of games to come</div>
-			<div class="features_text"></div>
+			<div class="features_text">Due to the flexibity of our infrastructure, we can easily add a lot of games without compromising the simplicity.
+</div>
 		</div>
+	</div>
+</div>
+
+<div class="stripe row">
+	<div class="col-md-3">
+		<%= image_tag "pong.png" %>
+		<div class="stripe_text_background"></div>
+		<div class="stripe_text">Pong</div>
+	</div>
+	<div class="col-md-3">
+		<%= image_tag "bombermanx.png" %>
+		<div class="stripe_text_background"></div>
+		<div class="stripe_text">Bomberman</div>	
+	</div>
+	<div class="col-md-3">
+		<%= image_tag "coming.png" %>
+	</div>
+	<div class="col-md-3">
+		<%= image_tag "soon.png" %>
 	</div>
 </div>
 
@@ -63,8 +91,19 @@
   <!-- to do -->
 </div>
 
-<div class="browse">
+<div class="container browse">
 	<button type="button" class ="btn btn-standard browse_button">Browse all games</button>
 	<div class="browse_text">
+		More games will be developed soon. If you want to help us make more games,
+please contact us at devgame@sybilai.com
 	</div>
 </div>
+
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>
+
+
+
+

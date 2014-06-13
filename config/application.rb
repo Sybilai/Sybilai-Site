@@ -21,6 +21,6 @@ module Wagahahahgagahah
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.enabled = true;
-    config.assets.path << "#{Rails.root}/app/assets/fonts"
+    config.assets.path << "#{Rails.root}/app/assets/fonts" if config.assets.path
   end
 end
