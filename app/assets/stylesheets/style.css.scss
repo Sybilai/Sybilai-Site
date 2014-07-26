@@ -172,6 +172,66 @@ p {
   text-align: center;
 }
 
+.devise_container_container{
+  width:300px;
+  margin: 0 auto;
+}
+
+.registerBtn{
+  width:100%; 
+}
+
+.deviseErrorMessages{
+  width:300px;
+  margin: 0 auto;
+}
+
+.deviseErrorMessages ul{
+  padding: 0;
+}
+
+.deviseErrorMessages li{
+  list-style-type: none;
+  color:red;
+  font-size: 18px;
+  width:300px;
+  height:30px;
+  text-align: center;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  margin:7px 0;
+  padding: 0;
+}
+
+.btnRegisterToLogin{
+  font-weight: bold;
+  color:#7c4eb9;
+}
+
+.registerToLogin{
+  margin:0 auto;
+  margin-top:16px;
+  padding-top: 8px;
+  width:300px;
+  border-top: 1px solid #c9c9c9;
+}
+
+.formLogo{
+  height:100px;
+  width:80px;
+  margin: 0 auto;
+  text-align:center;
+  margin-bottom: 20px;
+}
+
+.deviseSharedLinks{
+  margin-top: 15px;
+}
+
+.checkBox{
+  margin-bottom: 10px;
+}
+
 /* footer */
 
 footer {
