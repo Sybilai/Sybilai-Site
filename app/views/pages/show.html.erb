@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @page.name %>
-</h1>
+  <h1>
+    <%= @page.name %>
+  </h1>
 
-<%= @page.compiled_content.html_safe %>
+  <%= @page.compiled_content.html_safe %>
+</div>

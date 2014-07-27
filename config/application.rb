@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Wagahahahgagahah
   class Application < Rails::Application
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -20,7 +21,9 @@ module Wagahahahgagahah
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
     config.assets.enabled = true;
     config.assets.path << "#{Rails.root}/app/assets/fonts" if config.assets.path
+
   end
 end
