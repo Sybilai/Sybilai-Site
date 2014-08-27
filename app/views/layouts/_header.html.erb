@@ -1,20 +1,18 @@
 <div class="navbar global_header ">
-  
+
     <div class="container">
-      
+
       <nav>
         <a href="/"><%= image_tag "sybilai-logo-width.png", class: "navbar-brand header_logo"  %></a>
         <ul class="nav navbar-nav meniu">
-      	  <% Page.all.each do |page| %>
-      		  <li> <%= link_to page.name, page %></li>
-      	  <% end %>
+          <li><%= link_to "Games", games_path %></li>
+          <li><%= link_to "Ranking", ranking_path %></li>
       	</ul>
         <ul class="nav navbar-nav navbar-right header_navbar">
          <% if user_signed_in? %>
-            <li><span class="wel_mess">Logged in as <strong><%= current_user.email %></strong></span></li>
+            <li><span class="wel_mess"><strong><%= link_to current_user.email.split('@')[0], user_profile_path %></strong></span></li>
             <li><%= button_to "Logout", destroy_user_session_path, method: :delete, :class => "btn btn-primary btn_purple"%></li>
           <% else %>
-            
             <li><%= button_to 'sign in', new_user_session_path, :class=> "btn btn-default btn_no_hover" %></li>
             <li><%= button_to 'register', new_user_registration_path, :class=> "btn btn-primary btn_purple", :method => :get %></li>
 

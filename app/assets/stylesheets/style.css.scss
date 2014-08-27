@@ -172,6 +172,66 @@ p {
   text-align: center;
 }
 
+.devise_container_container{
+  width:300px;
+  margin: 0 auto;
+}
+
+.registerBtn{
+  width:100%; 
+}
+
+.deviseErrorMessages{
+  width:300px;
+  margin: 0 auto;
+}
+
+.deviseErrorMessages ul{
+  padding: 0;
+}
+
+.deviseErrorMessages li{
+  list-style-type: none;
+  color:red;
+  font-size: 18px;
+  width:300px;
+  height:30px;
+  text-align: center;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  margin:7px 0;
+  padding: 0;
+}
+
+.btnRegisterToLogin{
+  font-weight: bold;
+  color:#7c4eb9;
+}
+
+.registerToLogin{
+  margin:0 auto;
+  margin-top:16px;
+  padding-top: 8px;
+  width:300px;
+  border-top: 1px solid #c9c9c9;
+}
+
+.formLogo{
+  height:100px;
+  width:80px;
+  margin: 0 auto;
+  text-align:center;
+  margin-bottom: 20px;
+}
+
+.deviseSharedLinks{
+  margin-top: 15px;
+}
+
+.checkBox{
+  margin-bottom: 10px;
+}
+
 /* footer */
 
 footer {
@@ -194,7 +254,7 @@ footer small {
   margin-left:50px;
   float: left;
   line-height:55px;
-  font-family: 'ubuntulight';
+  font-family: 'Roboto';
   font-size:15px;
   color:#868686;
 }
@@ -219,9 +279,10 @@ footer ul li {
 
 .wel_mess{
   font-size: 14pt;
-  font-family: 'ubuntulight';
+  font-family: 'Roboto';
   margin-left: -6px;
   line-height: 2;
+  margin-right: 10px;
 }
 
 .header_logo{
@@ -244,7 +305,7 @@ footer ul li {
 
 .global_header a{
   text-decoration:none;
-  font-family: 'ubunturegular', Verdana, Arial;
+  font-family: 'Roboto', Verdana, Arial;
   font-size:15pt;
 }
 
@@ -253,7 +314,7 @@ footer ul li {
 }
 
 .header_navbar .btn{
-  font-family: 'ubunturegular';
+  font-family: 'Roboto';
 }
 
 .header_navbar ul li{
@@ -504,6 +565,7 @@ footer ul li {
 
 .browse_text{
   margin: 0 auto;
+  margin-top: 30px;
   width: 70%;
   color: #bbbbbb;
   font-size: 18pt;
@@ -518,7 +580,6 @@ footer ul li {
 }
 
 .help_us{
-  margin-left: 800px;
   line-height: 4;
   color: #3e3e3e;
   font-size: 16pt;
@@ -530,12 +591,13 @@ footer ul li {
   margin-top: 26px;
 }
 
-.game_image{
-  float:left;
+.game_info .cont {
+  margin-left: 20px;
 }
 
 .game_image img{
   width:100%;
+  height: auto;
 }
 
 .game_name{
@@ -552,6 +614,10 @@ footer ul li {
   font-size: 14pt;
 }
 
+.category ul {
+  margin-left: 20px;
+}
+
 .category ul li{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -561,6 +627,7 @@ footer ul li {
 .category_name{
   font-size: 18pt;
   color: #717171;
+  margin-bottom: 10px;
 }
 
 .category ul {
@@ -580,8 +647,15 @@ footer ul li {
   padding-right: 0px;
   padding-left: 0px;
 }
-
+.button_second {
+  &, a {
+    color: black !important;
+  }
+}
 .button_first{
+  &, a {
+    color: white !important;
+  }
   background: #7c4eb9; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjNGViOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YTMyOGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);

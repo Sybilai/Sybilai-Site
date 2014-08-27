@@ -1,21 +1,31 @@
-<h2>Sign up</h2>
+
+<div class="formLogo"><%= image_tag "formLogo.png", :class => "formLogo"%></div>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name),  :html => {:class => "devise_container new_user"}) do |f| %>
-  <%= devise_error_messages! %>
+  
   	<div class="devise_container_container">
 
-	  <div><%= f.label :email %><br />
-	  <%= f.email_field :email, :autofocus => true %></div>
+	  <div class="form-group">
+	  <%= f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Email" %></div>
 
-	  <div><%= f.label :password %><br />
-	  <%= f.password_field :password %></div>
+	  <div class="form-group">
+	  <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %></div>
 
-	  <div><%= f.label :password_confirmation %><br />
-	  <%= f.password_field :password_confirmation %></div>
+	  <div class="form-group">
+	  <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Repeat Passoword" %></div>
 
-	  <div><%= f.submit "Sign up" %></div>
+	  <div><%= f.submit "Sign up", :class => "btn btn-primary registerBtn btn_purple" %></div>
 
 	</div>  
+
+	<div class="deviseErrorMessages">
+		<%= devise_error_messages! %>
+	</div>
+
+	<div class="registerToLogin">
+		Already have an account? <%= button_to 'Sign in', new_user_session_path, :class=> "btn btn-default btn_no_hover btnRegisterToLogin" %> 
+	</div>
+
 <% end %>
 
 

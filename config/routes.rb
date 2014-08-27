@@ -4,7 +4,14 @@ Wagahahahgagahah::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get "api/NewScoring"
-  match '/', to: 'static_pages#Home', via: 'get'
+
+  unauthenticated do
+    root to: "static_pages#Home"
+  end
+  root to: "static_pages#Games", as: :authentificated_root
+
+  get '/users', to: 'users#show', as: :user_profile
+
   match '/global_ranking', to: 'static_pages#GlobalRanking', via: 'get'
   match '/pong', to: 'static_pages#Pong', via: 'get'
   match '/api/new_scoring', to: 'api#NewScoring', via: 'get'
